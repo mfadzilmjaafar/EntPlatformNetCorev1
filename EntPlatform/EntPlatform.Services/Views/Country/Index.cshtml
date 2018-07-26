@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Country>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Country Code
+                    </th>
+                    <th>
+                       Country Name
+                    </th>
+                 
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CountryCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+               
+            </tr>
+}
+            </tbody>
+        </table>
+    </div>
+</div>
