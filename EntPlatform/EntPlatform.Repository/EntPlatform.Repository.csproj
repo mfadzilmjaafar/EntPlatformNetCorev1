@@ -4,4 +4,15 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Model\BusinessNaturesModel.cs" />
+    <Compile Remove="Model\CountriesModel.cs" />
+    <Compile Remove="Model\OrganisationModel.cs" />
+    <Compile Remove="Model\StatesModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+
 </Project>

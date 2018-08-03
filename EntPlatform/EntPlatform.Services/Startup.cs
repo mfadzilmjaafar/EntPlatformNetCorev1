@@ -12,7 +12,6 @@ using EntPlatform.Services.Data;
 using EntPlatform.Services.Models;
 using EntPlatform.Services.Services;
 
-
 namespace EntPlatform.Services
 {
     public class Startup
@@ -29,9 +28,6 @@ namespace EntPlatform.Services
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddDbContext<EntPlaformContext>(options =>
-              options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
